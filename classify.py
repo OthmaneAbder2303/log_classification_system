@@ -1,5 +1,6 @@
 from processor_regex import classify_log
-
+from processor_bert import classify_with_bert
+from processor_llm import classify_with_llm
 
 def classify(logs):
     labels = []
@@ -10,11 +11,12 @@ def classify(logs):
 
 def Myclassify(source, log_msg):
     if source == "LegacyCRM":
-        pass #LLM
+        classify_with_llm(log_msg)
+        return None
     else :
         label = classify_log(log_msg)
         if label is None:
-            pass # BERT
+            classify_with_bert(log_msg)
         return label
 
 
