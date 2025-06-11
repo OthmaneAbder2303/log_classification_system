@@ -10,3 +10,13 @@ LegacyCRM,Invoice generation process aborted for order ID 8910 due to invalid ta
 LegacyCRM,The 'BulkEmailSender' feature is no longer supported. Use 'EmailCampaignManager' for improved functionality.,Deprecation Warning
 LegacyCRM, The 'ReportGenerator' module will be retired in version 4.0. Please migrate to the 'AdvancedAnalyticsSuite' by Dec 2025,Deprecation Warning
 Othmane,"Heellooo bro, hey doing.",Unclassified
+BillingSystem,Failed login attempt detected for user User888.,Security Alert
+ModernCRM,Potential phishing email detected and quarantined.,Security Alert
+AnalyticsEngine,Scheduled report generation failed due to missing data source.,Error
+ModernHR,Password reset requested for user 1203.,Security Alert
+LegacyCRM,Deprecated API endpoint /v1/tickets accessed by client.,Deprecation Warning
+Othmane,Just saying hi from my terminal 😄,Unclassified
+ModernCRM,SSL certificate expired for service endpoint https://secure.moderncrm.com,Error
+AnalyticsEngine,Anomaly detected in traffic pattern for dataset ID 87412.,Security Alert
+ModernHR,New employee profile created for John Doe.,Security Alert
+BillingSystem,Invoice ID 293847 marked as paid.,Unclassified
