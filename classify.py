@@ -1,3 +1,5 @@
+import pandas as pd
+
 from processor_regex import classify_log # regex
 from processor_bert import classify_with_bert
 from processor_llm import classify_with_llm
@@ -19,8 +21,18 @@ def my_classifier(source, log_msg):
     return label
 
 
+def classify_csv(file_path):
+    try:
+        df = pd.read_csv(file_path)
+        assert "source" in df.columns and "log_message" in df.columns
+        df["target_label"] = classify(zip(df["source"], df["log_message"]))
+        df.to_csv("resources/output.csv", index=False)
+    except Exception as e:
+        print(f"[Error] Processing failed: {e}")
+
 if __name__ == "__main__":
-    #classify_csv("test.csv")
+    classify_csv("resources/test.csv")
+    '''
     logs = [
          ("ModernCRM", "IP 192.168.133.114 blocked due to potential attack"),
          ("BillingSystem", "User User12345 logged in."),
@@ -38,3 +50,4 @@ if __name__ == "__main__":
 
     for log, label in zip(logs, labels):
         print(log[0], "->", label)
+    '''
