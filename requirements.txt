@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-dotenv
+groq
+sentence-transformers
+joblib
+pandas
+scikit-learn
+python-multipart
+tf-keras

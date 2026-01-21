@@ -1,6 +1,7 @@
 import pandas as pd
 from fastapi import FastAPI, UploadFile, HTTPException
 from fastapi.responses import FileResponse
+import uvicorn
 
 from classify import classify
 
@@ -35,3 +36,6 @@ async def classify_logs(file: UploadFile):
         # # Clean up if the file was saved
         # if os.path.exists("output.csv"):
         #     os.remove("output.csv")
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
