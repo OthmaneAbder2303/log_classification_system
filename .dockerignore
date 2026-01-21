@@ -1,0 +1,7 @@
+.env
+.git
+.gitignore
+__pycache__
+resources/output.csv
+*.pkl
+*.joblib
